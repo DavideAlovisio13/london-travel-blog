@@ -1,13 +1,146 @@
+.todo-list {
+  margin: 20px 0;
+}
+
 .todo-item {
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.todo-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: rgb(191, 128, 139);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
 }
 
 .todo-item:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.todo-item:hover::before {
+  transform: scaleY(1);
+}
+
+.todo-item.completed {
+  background-color: rgba(209, 151, 87, 0.3);
+}
+
+.todo-item.completed p {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.todo-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgb(191, 128, 139);
+  border-radius: 50%;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed .todo-checkbox {
+  background-color: rgb(191, 128, 139);
+  color: white;
+}
+
+.checkbox-icon {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .todo-item p {
-    display: flex;
-    justify-content: space-between;
+  margin: 0;
+  flex: 1;
+}
+
+.todo-filters {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: "Caveat", cursive;
+  font-size: 1.2em;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: rgba(191, 128, 139, 0.3);
+}
+
+.filter-btn.active {
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.empty-list-message {
+  text-align: center;
+  font-style: italic;
+  margin: 30px 0;
+  color: #666;
+}
+
+.todo-stats {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 100%;
+  background-color: rgb(191, 128, 139);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.stats-text {
+  font-size: 1em;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .todo-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-btn {
+    width: 80%;
+  }
 }
