@@ -1,0 +1,92 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general */
+body {
+    font-family: 'Caveat', cursive;
+    background-image: url(/img/PuwoAuJ.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1400px;
+    background-color: rgba(248, 248, 255, 0.5);
+}
+
+main {
+    position: relative;
+}
+
+/* Stili comuni */
+.title {
+    -webkit-text-stroke: 1px black;
+    color: rgb(191, 128, 139);
+    text-shadow:
+        3px 3px 0 #958C7D,
+        -1px -1px 0 #958C7D,
+        1px -1px 0 #958C7D,
+        -1px 1px 0 #958C7D,
+        1px 1px 0 #958C7D;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+/* Stili per le sezioni di sfondo */
+.bgsect {
+    width: 60%;
+    margin: 25px auto;
+}
+
+.bgsect p, tr {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+/* Stili per lampada */
+#lamp {
+    background-image: url(/img/lamp.svg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0%;
+    width: 17%;
+    height: 100%;
+}
+
+/* Stili per liste */
+ul {
+    list-style-image: url(/img/Progetto\ senza\ titolo\ \(4\).svg);
+}
+
+/* Media queries per responsività */
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .bgsect {
+        width: 90%;
+    }
+    
+    #lamp {
+        display: none;
+    }
+    
+    .title {
+        font-size: 2em;
+    }
+    
+    .bgsect p, tr {
+        font-size: 1.2em;
+    }
+}

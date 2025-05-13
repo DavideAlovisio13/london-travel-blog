@@ -1,0 +1,21 @@
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    padding: 10px;
+    background-color: rgba(209, 151, 87, 0.5);
+}
+
+td {
+    padding: 5px 30px;
+    background-color: rgba(209, 151, 87, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+    td {
+        padding: 5px 10px;
+    }
+}

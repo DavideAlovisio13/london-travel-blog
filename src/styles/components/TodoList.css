@@ -1,0 +1,13 @@
+.todo-item {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    transform: translateX(5px);
+}
+
+.todo-item p {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,15 @@
+.headercontainer {
+    margin: auto;
+    padding: 10px; 
+    text-align: center;
+}
+
+#maintitle {
+    font-size: 4em;
+}
+
+@media screen and (max-width: 768px) {
+    #maintitle {
+        font-size: 2.8em;
+    }
+}
