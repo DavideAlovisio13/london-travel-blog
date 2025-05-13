@@ -8,7 +8,7 @@
 /* general */
 body {
     font-family: 'Caveat', cursive;
-    background-image: url(/img/PuwoAuJ.jpg);
+    background-image: url(../assets/PuwoAuJ.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -53,7 +53,7 @@ main {
 
 /* Stili per lampada */
 #lamp {
-    background-image: url(/img/lamp.svg);
+    background-image: url(../assets/lamp.svg);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -64,7 +64,7 @@ main {
 
 /* Stili per liste */
 ul {
-    list-style-image: url(/img/Progetto\ senza\ titolo\ \(4\).svg);
+    list-style-image: url(../assets/Progetto\ senza\ titolo\ \(4\).svg);
 }
 
 /* Media queries per responsività */
